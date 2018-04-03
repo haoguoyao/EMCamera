@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 18, 2018 3:14:14 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.User"  abstract="true">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+    <union-subclass name="model.Student" table="Student">
+        <property name="mailBox" column="MAILBOX"/>
+        <set name="classes" table="studentinclass" inverse="false" lazy="true" access="field" cascade="none">
+            <key>
+                <column name="studentID" />
+            </key>
+            <many-to-many class="model.CClazz" column = "classID"/>
+        </set>
+    </union-subclass>
+    
+    <union-subclass name="model.Teacher" table="Teacher">
+    </union-subclass>
+    
+    </class>
+</hibernate-mapping>
