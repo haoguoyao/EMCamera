@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 29, 2018 5:37:52 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.hgy.model.Status" table="STATUS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="studentID" type="int">
+            <column name="STUDENTID" />
+        </property>
+        <property name="rollCallID" type="int">
+            <column name="ROLLCALLID" />
+        </property>
+        <property name="isArrive" type="boolean" access="field">
+            <column name="ISARRIVE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<!--upload/upload.wxml-->
+<view class="container">
+<text>\t\tUpload or change photo\n\n</text>
+  <view>
+
+      
+     <form catchsubmit="formSubmit" catchreset="formReset">
+        <view class="inputzone">
+          <image bindtap="listenerButtonChooseImage" src="{{image_url}}"></image>
+
+        </view>
+
+        <view class="submitzone">
+          <button type="primary" formType="submit"  bindtap="upLoadPhoto">{{textButton}}</button>
+        </view>
+    </form>
+    <view class="submitzone">
+      <button type="primary" bindtap='firstPage'>Change Account</button>
+    </view>
+  </view>
+</view>

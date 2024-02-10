@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+     <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="inputzone">
+          <view id="usrnameinput" class="section" >
+            student number：<input name="id" type="number" bindinput='studentNumberInput'/>
+          </view>
+        </view>
+
+        <view class="submitzone">
+          <button type="primary" formType="submit" >Submit</button>
+        </view>
+    </form>
+    
+  </view>
+</view>

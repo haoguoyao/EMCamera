@@ -1,0 +1,21 @@
+/**index.wxss**/
+#usrnameinput{
+  margin-top:50px;
+}
+
+#pwdinput{
+  margin-top: 20px;
+}
+
+.submitzone{
+  margin-top: 40px;
+}
+
+input{
+  border-bottom-color: #888888;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width:0px;
+}

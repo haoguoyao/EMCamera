@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 17, 2018 10:46:11 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.hgy.model.PhotoResult" table="PHOTORESULT">
+
+        <id name="photoURL" type="java.lang.String">
+            <column name="PHOTOURL" />
+            <generator class="assigned"/>
+        </id>
+        <property name="studentID" type="int">
+            <column name="STUDENTID" />
+        </property>
+    </class>
+</hibernate-mapping>

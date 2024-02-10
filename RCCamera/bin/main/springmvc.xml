@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd 
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd 
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd 
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+        
+ 
+    <mvc:annotation-driven />
+    <!--  视图解析器 -->
+    <bean
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
+    <context:component-scan base-package="com.hgy.handler" />
+    
+    <!-- 处理2进制上传 表单，文件 -->
+    <!-- 配置文件上传，所有二进制提交都需要配置这个 -->
+    <bean id = "multipartResolver"
+        class = "org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置上传文件的大小, 单位：字节 -->
+        <property name = "maxUploadSize">
+            <value>52428800</value>
+        </property>
+    </bean>
+    <!-- 静态资源（图片） -->
+    <!-- <mvc:resources location="/personalPhoto/" mapping="/personalPhoto/**"/> 
+    <mvc:resources location="/classPhoto/" mapping="/classPhoto/**"/>  -->
+
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 18, 2018 3:14:14 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+
+
+    <class name="com.hgy.model.User"  abstract="true">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        
+        
+        
+    <union-subclass name="com.hgy.model.Student" table="Student">
+        <property name="openid" column="openid"/>     
+        <property name="url" column="url"/> 
+    </union-subclass>
+    
+    
+    <union-subclass name="com.hgy.model.Teacher" table="Teacher">
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+    </union-subclass>
+    
+    
+    </class>
+</hibernate-mapping>

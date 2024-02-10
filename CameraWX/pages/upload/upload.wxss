@@ -1,0 +1,16 @@
+/* upload/upload.wxss */
+.chooseLibrary{
+  width: 50px;
+  height: 50px;
+  font-size: 100%;
+  text-align: center;
+  vertical-align: center;
+  overflow:hidden;  
+}
+
+.previewImg{
+  width: 200px;
+  height: 200px;
+  border-bottom: 5px;
+  border-bottom-color: #000000;
+}
